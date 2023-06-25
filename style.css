@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+
+*,
+*::before,
+**::after {
+  box-sizing: border-box;
+  font-family: 'Lucida Console', Monaco, monospace;
+  font-weight: normal;
+}
+
+body {
+  background: rgb(44, 94, 99);
+  padding: 0;
+  margin: 0;
+}
+
+.calculator-grid {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgb(124, 118, 130);
+  outline: none;
+  color: rgba(67, 81, 104, 0.8);
+  border-color: rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 0px fade-out(#fff, 0.5);
+}
+.calculator-grid > button:active {
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.output {
+  font-family: Oleo Script;
+  color: rgb(124, 118, 130);
+  text-shadow: 1px 1px 0px fade-out(white, 0.4);
+}
