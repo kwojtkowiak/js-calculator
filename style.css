@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+@import url('https://fonts.cdnfonts.com/css/lucida-console');
 
 *,
 *::before,
 **::after {
   box-sizing: border-box;
-  font-family: 'Lucida Console', Monaco, monospace;
+  font-family: 'Lucida Console', monospace;
   font-weight: normal;
 }
 
@@ -26,18 +26,43 @@ body {
 .calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
-  border: 1px solid rgb(124, 118, 130);
+  border: 1px solid rgba(0, 0, 0, 0.4);
   outline: none;
-  color: rgba(67, 81, 104, 0.8);
-  border-color: rgba(0, 0, 0, 0.4);
-  text-shadow: 1px 1px 0px fade-out(#fff, 0.5);
+  background-color: rgba(66, 170, 255, 0.75);
+}
+.calculator-grid > button:hover {
+  background-color: rgba(66, 170, 255, 0.9);
 }
 .calculator-grid > button:active {
   box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
-
+#func-button {
+  background-color: rgb(94, 71, 58, 0.9);
+}
+#operation-button {
+  background-color: rgb(34, 102, 50, 0.9);
+}
+#equal-button {
+  background-color: rgba(255, 137, 69, 0.863);
+}
+.big-button {
+  grid-column: span 2;
+}
 .output {
-  font-family: Oleo Script;
-  color: rgb(124, 118, 130);
-  text-shadow: 1px 1px 0px fade-out(white, 0.4);
+  grid-column: 1 / -1;
+  background-color: rgb(170, 171, 162, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-all;
+  padding-right: 0.5rem;
+}
+.output .previous-calculation {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.output .current-calculation {
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0);
 }
