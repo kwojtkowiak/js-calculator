@@ -4,9 +4,12 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.cdnfonts.com/css/lucida-console" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/c32f7bdd46.js" crossorigin="anonymous"></script>
+    <script src="calculator.js" defer></script>
   </head>
   <body>
     <div class="calculator-grid">
+      <div class="title">CALCULATOR</div>
       <div class="output">
         <div data-previous-calculation class="previous-calculation"></div>
         <div data-current-calculation class="current-calculation"></div>
@@ -26,10 +29,19 @@
       <button data-number>8</button>
       <button data-number>9</button>
       <button data-operation id="operation-button">-</button>
-      <button data-number>,</button>
+      <button data-number>.</button>
       <button data-number>0</button>
       <button data-equals id="equal-button" class="big-button">=</button>
+      <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          kwojtkowiak
+        </p>
+        <a href="https://github.com/kwojtkowiak" target="_blank"> <i class="fab fa-github"></i></a>
+      </footer>
     </div>
-    <script src="calculator.js" defer></script>
   </body>
 </html>

@@ -20,9 +20,22 @@ body {
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-rows: minmax(50px, auto) repeat(6, 100px);
 }
-
+.title {
+  grid-column: 1 / -1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(34, 102, 50, 0.9);
+  height: auto;
+  border: gray solid 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 2rem;
+  color: white;
+  padding: 4px;
+}
 .calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
@@ -65,4 +78,23 @@ body {
 .output .current-calculation {
   font-size: 2.5rem;
   color: rgba(0, 0, 0);
+}
+
+.footer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.fa-github {
+  color: rgba(255, 137, 69, 0.863);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }
